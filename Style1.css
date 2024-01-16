@@ -1,0 +1,107 @@
+/*---General---*/
+* {
+    color: #000137;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, monospace;
+}
+
+body {
+    background-color: #C1E3ED;
+}
+
+/*---Form Fields & Buttons---*/
+input[type="text"], 
+input[type="date"], 
+input[type="tel"], 
+input[type="email"],
+select,
+textarea {
+    width: 20em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid #000137;
+    border-radius: 0.5em;
+    outline: none;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #000137;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.2em;
+    padding: 0.2em 1em;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #AAC9DD;
+}
+
+/*---Header---*/
+/*---Evaluation Form---*/
+fieldset {
+    background-color: #AAC9DD;
+    border-color: #AAC9DD;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+   
+
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #AAC9DD;
+}
+
+ul.evaluationList {
+    list-style-type: none;
+}
+
+ul.evaluationList > li {
+    margin-bottom: 2em;
+}
+
+.section {
+    padding-left: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
+    
+}
+
+.half-width {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 2.5%;
+}
+
+.half-width:last-child {
+    margin-right: 0;
+}
+
+.section h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#AgreeCheckbox {
+    text-align: center;
+}
+
+.endButtons {
+    display: flex;
+    justify-content: center;
+    gap: 2.5em;
+    font-size: 1.5em;
+}
+
+.contentSize {
+    font-size: 0.6em;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Course enrollment</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="courseEnrollment.css">
+</head>
+
+<body>
+<header>
+<div id="vision">
+
+<img src="images/logo.jpg" alt"logo" width=15%  height=30%>
+
+
+<div class="VisionInfo">
+<h1>Young programmer</h1>
+<p>Our vision is to inspire young minds tomaster coding and shape tomorrow’s world</p>
+</div>
+
+<div class="nav">
+<nav>
+<a href="" class="link"> Administrator dashboard</a>
+<a href=""class="link"> Parents dashboard</a>
+<a href="" class="link"> Courses</a>
+<a href="" class="link"> Tutors</a>
+<p>Hello,name</p>
+</nav>
+
+</div>
+
+</div>
+</header>
+
+<main>
+<br>
+<ul class="breadCrump">
+<li><a href="" class="link">Home</a></li>
+<li><a href="" class="link">Parents Dashboard</a></li>
+<li> &#32; Course enrollment form</li>
+</ul>
+<br>
+<br>
+<h1 id="EvaluationPageName">Course enrollment page</h1>
+
+<div class="evaluationContent">
+<form class="evaluationForm"> 
+  <fieldset>
+    <br>  
+    <legend>Course enrollment page</legend>
+    <ul class="evaluationList"> 
+      <li>
+        <label>Choose which kid to enroll:</label> 
+		<br>
+        <select id="ChooseKids" name="ChooseKids" class="dropdown"> 
+		  <option value="" disabled selected>Choose kid</option>
+          <option value="Ahmad Abdullah">Ahmad Abdullah</option> 
+          <option value="Sara Abdullah">Sara Abdullah</option> 
+          <option value="Noura Abdullah">Noura Abdullah</option> 
+        </select>
+      </li>
+ 
+      <li>
+        <label>Choose which course:</label> 
+        Prerequisite:
+        <select id="Prerequisite" name="Prerequisite" class="dropdown"> 
+		  <option value="" disabled selected>Prerequisite</option>
+		  <option value="All">All</option> 
+          <option value="None">None</option> 
+          <option value="Introduction to coding">Introduction to coding</option> 
+          <option value="Coding with python">Coding with python</option> 
+          <option value="Minecraft modding">Minecraft modding</option> 
+		
+		</select>
+        Tutor:
+        <select id="Tutor" name="Tutor" class="dropdown"> 
+		  <option value="" disabled selected>Tutor</option>
+		  <option value="All">All</option>
+          <option value="Jessica Ibbott">Jessica Ibbott</option> 
+          <option value="Huxley Victors">Huxley Victors</option> 
+          <option value="Kristy Roderick">Kristy Roderick</option> 
+		  <option value="Pepper Mason">Pepper Mason</option> 
+          <option value="Sharif Dabney">Sharif Dabney</option> 
+          <option value="Tatton Towner">Tatton Towner</option> 
+        </select>
+        <button type="button" onclick="filterCourses()" class="contentSize">Filter</button>
+        <ul class="evaluationListCourses"> 
+          <li data-prerequisite="None" data-tutor="Kristy Roderick"><input type="checkbox" name="course" value="Introduction to coding" checked><img src="images/scratch_coding.jpg" alt="scratch_coding" class="coursePic">Introduction to coding</li>
+          <li data-prerequisite="Introduction to coding" data-tutor="Huxley Victors"><input type="checkbox" name="course" value="Introduction to web-Development" ><img src="images/webCodingKids.jpg" alt="webCodingKids" class="coursePic">Introduction to web-Development</li>
+          <li data-prerequisite="Minecraft modding" data-tutor="Pepper Mason"><input type="checkbox" name="course" value="Young game creator" ><img src="images/GameDeveloper.jpg" alt="GameCreator" class="coursePic">Young game creator</li>
+          <li data-prerequisite="Introduction to coding" data-tutor="Sharif Dabney"><input type="checkbox" name="course" value="Coding with python" ><img src="images/Python_Programming.jpg" alt="Python_Programming" class="coursePic">Coding with python</li>
+          <li data-prerequisite="Coding with python" data-tutor="Jessica Ibbott"><input type="checkbox" name="course" value="Arduino Basics" ><img src="images/Arduino.png" alt="Arduino" class="coursePic">Arduino Basics</li>
+          <li data-prerequisite="Coding with python" data-tutor="Tatton Towner"><input type="checkbox" name="course" value="Minecraft modding" ><img src="images/MaincraftModding.jpg" alt="MaincraftModding" class="coursePic">Minecraft modding</li>
+		  
+        </ul> 
+      </li>
+
+<script>
+function filterCourses() {
+    const selectedPrerequisite = document.getElementById("Prerequisite").value;
+    const selectedTutor = document.getElementById("Tutor").value;
+    const courses = document.querySelectorAll("[data-prerequisite]");
+
+    courses.forEach(course => {
+        const coursePrerequisite = course.getAttribute("data-prerequisite");
+        const courseTutor = course.getAttribute("data-tutor");
+
+        if ((coursePrerequisite === selectedPrerequisite || selectedPrerequisite === "" || selectedPrerequisite === "All") && 
+            (courseTutor === selectedTutor || selectedTutor === "" || selectedTutor === "All")) {
+            course.style.display = "list-item";
+        } else {
+            course.style.display = "none";
+        }
+    });
+}
+
+</script>
+
+
+
+      <br>
+	 
+      <li>
+        <label>Payment form:</label> 
+        <select id="PaymentForm" name="PaymentForm" class="contentSize">
+          <option value="" disabled selected>Choose payment form</option>		
+          <option value="Card">Card</option> 
+          <option value="Cash">Cash</option> 
+        </select>
+      </li>
+ 
+      <li id="AgreeCheckbox">
+	  <br>
+        <input type="checkbox" name="agree" value="agree" checked class="contentSize"> I agree to enroll my kid to the following course
+      </li> 
+    <br>
+	<div class="endButtons">
+    <li><input type="submit" value="Submit" class="contentSize"></li>
+    <li><input type="reset" value="Cancel" class="contentSize"></li>
+	</ul>
+	</div>
+  </fieldset> 
+</form>
+</div>
+</main>
+
+
+
+<footer>
+<div class="footer-content">
+
+<div class="contact-us">
+<h4>Contact us:</h4>
+<ul>
+<li><a href="mailto:recipient@example.com"><i class="fa fa-envelope"></i> &nbsp;Email</a> </li>
+<li><a href="#"><i class="fa fa-twitter"></i> &nbsp;X</a></li>
+</ul>
+</div>
+		
+<div class="address">
+<h4>Adress:</h4>
+<ul>
+<p><pre>Modern Riyadh Academy
+123 Knowledge Street
+Al Olaya District
+Riyadh 11564
+Kingdom of Saudi Arabia</pre> <p>
+</div>
+
+</div>
+<div class="copyright">
+<p>copyright</p>
+</div>
+</footer>
+</footer>
+
+</body>
+
+</html>

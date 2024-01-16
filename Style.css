@@ -1,0 +1,138 @@
+/* General styles and resets */
+
+header, .container1, .container2 {
+    flex: 1 0 auto;
+}
+
+fieldset {
+    background-color: #AAC9DD;
+    border-color: #AAC9DD;
+}
+
+legend {
+    font-size: 2em;
+    background-color: #AAC9DD;
+}
+
+/* First container styles */
+
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    gap: 2%;
+    width: 100%;
+}
+
+.card1 {
+    width: 15em;
+    background-color: white;
+    border: 0.0625em solid #ddd;
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+    width: 6em;
+    height: 6em;
+    border: 0.125em solid #ddd;
+    border-radius: 50%;
+    margin: 0 auto 0.625em;
+    overflow: hidden;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.cardName {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Breadcrumbs styles */
+
+ul.breadCrump {
+    list-style-type: none;
+    margin-left: 1em;
+}
+
+ul.breadCrump li {
+    display: inline;
+    font-size: 1em;
+    color: #000137;
+}
+
+ul.breadCrump li+li::before {
+    content: ">";
+}
+
+ul.breadCrump li a {
+    color: #000137;
+}
+
+ul.breadCrump li a:hover {
+    text-decoration: underline;
+}
+
+/* Second container styles */
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #AAC9DD, #89ABCB);
+    padding: 1em;
+    gap: 2%;
+    width: 100%;
+    border: #f0f0f0;
+}
+
+.card2 {
+    width: 15em;
+    background-color: white;
+    border: 0.0625em solid #ddd;
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+}
+
+.linkedButton {
+    display: block;
+    text-align: center;
+    padding: 0.5em 1em;
+    background: linear-gradient(to right, #AAC9DD, #0056b3);
+    color: #fff;
+    border-radius: 0.25em;
+    text-decoration: none;
+    margin-top: 1em;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    border: none;
+    padding: 1em 2em;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.linkedButton:hover {
+    background: linear-gradient(to right, #AAC9DD, #007bff);
+    font-size: 1.05em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+

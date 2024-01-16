@@ -1,0 +1,345 @@
+/*--------------------header--------------*/
+#vision {
+    display: flex;
+	height: 12em;
+}
+
+#vision img {
+    height: 100%;
+    width: auto;
+    align-self: flex-start;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.VisionInfo {
+    flex: 1;
+    padding: 2.5em;
+    background-color: #78AED3;
+}
+
+.VisionInfo h1, .VisionInfo p {
+    margin: 0;
+    color: #000137;
+	text-align:center;
+}
+
+.nav {
+    flex: 1;
+    padding: 1em;
+    background-color: #AAC9DD;
+}
+
+.nav nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav a.link {
+    text-decoration: none;
+    color: #007BFF;
+    margin-right: 1em;
+}
+
+.nav p {
+    margin: 0;
+    color: #333;
+}
+
+
+@media (max-width: 768px) {
+    #vision {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    #vision img {
+        height: auto; 
+        width: 100%; 
+        max-width: 5em ;
+        margin: 0 auto; 
+    }
+
+    .contentWrapper {
+        padding-top: 1em; 
+    }
+
+    .nav nav {
+        flex-direction: column; 
+    }
+}
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #78AED3;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.contact-us, .address {
+    flex: 1;
+    padding: 0 1em;
+    text-align: center;
+    position: relative;
+}
+
+.contact-us::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0.05em;
+    background-color: #ccc;
+}
+
+.address h4, .contact-us h4 {
+    margin-bottom: 1.5em;
+    font-size: 0.9em;
+    color: #000137;
+    font-weight: bolder;
+}
+
+.address {
+    padding-top: 1em;
+    font-size: 1em;
+    text-align: center;
+}
+.address pre {
+
+    text-align: center;
+   
+}
+
+.contact-us {
+    padding-top: 1em;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+	text-align:center;
+   
+}
+
+.contact-us ul {
+	display:inline-block;
+    text-align:left;
+    list-style-type: none;
+}
+
+li a {
+    color: #000137;
+    padding: 0.1em;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+li a:hover {
+    background-color: #AAC9DD;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: bolder;
+    color: #000137;
+    padding-bottom: 0.2em;
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .contact-us, .address {
+        padding: 1em 0;
+    }
+
+    .contact-us::after {
+        display: none; 
+    }
+
+    .address, .contact-us {
+        text-align: center;
+        margin-bottom: 1em; 
+    }
+}
+
+
+/*------------comments-----------------*/
+
+
+#ReviewsName{
+	background-color: #AAC9DD;
+    color: #000137; 
+    padding: 0.2em 1em; 
+    display: inline; 
+    margin-left:0.5em;
+
+}
+
+
+
+
+.ReviewPost p{
+	font-size:1em;
+	color:#000137; 
+}
+
+
+
+.ReviewPhoto{
+	display:block;
+	width:10em;
+	height:10em;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+
+
+.ReviewsContainer
+{
+
+
+ display:flex;
+ flex-direction:row;
+ justify-content:space-between;
+ align-items:baseline;
+ gap:1vw;
+ height: 100em;
+ overflow: auto;
+ background-color:#AAC9DD;
+ background-clip:padding-box;
+ margin-left:1em;
+ margin-right:1em;
+ padding-top:3em;
+
+}
+
+body
+{
+background-clip: border-box;
+background-color: #C1E3ED;
+
+}
+
+#left
+{
+ display:inline-block;
+  height:5vw;
+  width:5vw;
+}
+
+#right
+{
+ display:inline-block;
+ height:5vw;
+ width:5vw;
+}
+
+
+#scrollhorizontally
+{
+display:flex;
+max-height:60vh;
+border:solid;
+background-color:#78AED3;
+white-space:nowrap;
+overflow-x:scroll;
+
+
+}
+
+#slideRight
+{
+	width: 0;
+	height: 0;
+	border-top: 2em solid transparent;
+	border-left: 3.5em solid #555;
+	border-bottom: 2em solid transparent;
+	background-color:#78AED3;
+	display: inline-block;
+	float:right;
+	
+
+}
+
+#slideLeft
+{
+	width: 0;
+	height: 0;
+	border-top: 2em solid transparent;
+	border-right: 3.5em solid #555;
+	border-bottom: 2em solid transparent;
+	background-color:#78AED3;
+	display: inline-block;
+	float:left;
+	
+
+}
+
+
+
+
+.ReviewPost {
+    min-width: 17em;
+    height: auto; 
+    text-align: center;
+    background-color: #AAC9DD;
+    margin-right: 5em;
+    padding: 1em;
+    display: flex; 
+	overflow:auto;
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+
+
+
+/*-----------------------breadcrump-----------------------*/
+
+ul.breadCrump{
+	list-style-type:none; 
+    margin-left:1em;
+	}
+ul.breadCrump li{
+	display:inline;
+	font-size:1em;
+	color: #000137; 
+}
+
+ul.breadCrump li+li::before{
+	content:">";
+}
+
+ul.breadCrump li a{
+	color: #000137; 
+}
+
+ul.breadCrump li a:hover{
+	text-decoration:underline;
+}
+
+

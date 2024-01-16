@@ -1,0 +1,246 @@
+/*-------------------Evaluation form-----------------------------*/
+
+*{
+	color:#000137;
+	margin:0%;
+    padding:0%;
+    box-sizing:border-box;
+	font-family:sans-serif,monospace;
+}
+
+body
+{
+   background-clip: border-box;
+   background-color: #C1E3ED;
+
+}
+
+.evaluationForm{
+	font-size:1.5em;
+}
+
+ul.evaluationList{
+list-style-type:none;
+}
+
+
+.evaluationListCourses li {
+    display: flex;
+    align-items: center; 
+    gap: 1em; 
+}
+
+.coursePic{
+	width:4em;
+	height:4em;
+	 
+}
+
+
+
+.evaluationContent{
+
+ background-color:#AAC9DD;
+ background-clip:padding-box;
+ margin-left:1em;
+ margin-right:1em;
+ padding-top:3em;
+ width: 100vw;
+ height: 100em;
+
+ 
+ 
+}
+
+#EvaluationPageName{
+	background-color: #AAC9DD;
+    color: #000137; 
+    padding: 0.2em 1em; 
+    display: inline; 
+    margin-left:0.5em;
+
+}
+
+#AgreeCheckbox{
+	text-align:center;
+	
+}
+
+.endButtons{
+	display:flex;
+	justify-content:center;
+	gap:2.5em;
+	font-size:1.5em;
+}
+
+.contentSize{
+	font-size:0.6em;
+}
+
+
+ /*------------------BreadCrump-----------------------*/
+ 
+ul.breadCrump{
+	list-style-type:none; 
+    margin-left:1em;
+	}
+ul.breadCrump li{
+	display:inline;
+	font-size:1em;
+	color: #000137; 
+}
+
+ul.breadCrump li+li::before{
+	content:">";
+}
+
+ul.breadCrump li a{
+	color: #000137; 
+}
+
+ul.breadCrump li a:hover{
+	text-decoration:underline;
+}
+
+/*---------------Header-----------------*/
+ 
+
+
+header
+{
+
+	margin:0%;
+    padding:0%; 
+}
+
+
+header img
+{
+	float:left;
+	border-radius:5%;
+	border: solid black;
+	margin-right:2%;
+}
+
+.VisionInfo
+{
+	background-color:#78AED3;
+	padding-top:3%;
+	padding-bottom:1%;
+	color:#000137;
+}
+
+.VisionInfo h1,p
+{
+	text-align:center;
+}
+
+.nav
+{
+	background-color:#AAC9DD;
+	padding-top:1%;
+	padding-bottom:1.25%;
+	color:#000137;
+}
+
+.nav .link
+{
+	margin-right:7%;
+}
+
+.nav p
+{
+	display:inline;
+}
+
+
+/*------------------footer------------------*/
+
+footer {
+    background-color: #78AED3;
+    padding: 0.01% 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* ... existing styles ... */
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900%;
+    margin: 0 auto;
+    padding: 0 1%;
+    position: relative;
+	
+}
+
+.contact-us, .address {
+    flex: 1;
+    padding: 0 1%;
+	text-align: center;
+}
+
+/* Add the following styles for the vertical line */
+
+.footer-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 0.1%;
+    background-color: #ccc;
+    transform: translateX(-50%);
+	
+}
+
+
+.address h4 {
+    margin-bottom: 2%;
+	font-size:0.9em;
+	  color: #000137;
+}
+
+.address {
+    padding-top: 1.5%;
+	margin-top: 1%;
+    font-size: 1em;
+}
+
+.contact-us {
+padding-top: 2%;
+margin-bottom: 2%;
+    font-size: 1em;
+}
+
+.contact-us h4 {
+    margin-bottom: 3%;
+	font-size: 0.9em;
+	color: #000137;
+}
+
+li a {
+  color:#000137;
+  text-align: center;
+  padding: 0.1%;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color: #AAC9DD;
+}
+
+
+.copyright {
+    text-align: center;
+    padding-top: 1%;
+	padding-bottom: 1%;
+    font-size: 0.7em;
+    color: #000137;
+	
+
+}
